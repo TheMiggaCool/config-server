@@ -58,8 +58,8 @@ El Maven Wrapper está incluido, por lo que no es necesario instalar Maven globa
 | Variable | Uso | Valor predeterminado |
 |---|---|---|
 | `CONFIG_GIT_URI` | URI del repositorio Git con las configuraciones | `https://github.com/TheMiggaCool/logitrack-config.git` |
-| `SPRING_CLOUD_CONFIG_SERVER_GIT_USERNAME` | Usuario para acceder al repositorio privado | Sin valor predeterminado |
-| `SPRING_CLOUD_CONFIG_SERVER_GIT_PASSWORD` | Contraseña o token de acceso Git | Sin valor predeterminado |
+| `SPRING_CLOUD_CONFIG_SERVER_GIT_USERNAME` | Usuario para acceder al repositorio privado | Sin valor predeterminado | - |
+| `SPRING_CLOUD_CONFIG_SERVER_GIT_PASSWORD` | Contraseña o token de acceso Git | Sin valor predeterminado | - |
 
 Las variables de usuario y contraseña solo son necesarias si el repositorio requiere autenticación. No guardes tokens, contraseñas ni otros secretos en `application.yaml` ni en el repositorio Git.
 
