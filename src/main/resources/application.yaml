@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: config-server
+
+  cloud:
+    config:
+      server:
+        git:
+          # URL del repo de configuraciones. Se puede sobreescribir con la variable CONFIG_GIT_URI.
+          # TODO: reemplazar CAMBIAR-USUARIO por la cuenta/organización real del equipo.
+          uri: ${CONFIG_GIT_URI:https://github.com/TheMiggaCool/logitrack-config.git}
+          default-label: main
+          # Clona al arrancar: si la URI está mal, el servidor falla enseguida en vez de en el primer pedido.
+          clone-on-start: true
+          # Repo privado: no escribas credenciales acá. Pasalas como variables de entorno:
+          #   SPRING_CLOUD_CONFIG_SERVER_GIT_USERNAME / SPRING_CLOUD_CONFIG_SERVER_GIT_PASSWORD
+
+server:
+  port: 8888
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
