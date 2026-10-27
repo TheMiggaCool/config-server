@@ -18,7 +18,9 @@ FROM eclipse-temurin:25-jre
 
 WORKDIR /app
 
-RUN useradd --system --no-create-home appuser
+RUN apt-get update && apt-get install -y --no-install-recommends curl \
+    && rm -rf /var/lib/apt/lists/* \
+    && useradd --system --no-create-home appuser
 
 COPY --from=build /app/target/*.jar app.jar
 
