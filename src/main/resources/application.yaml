@@ -8,7 +8,7 @@ spring:
         git:
           # URL del repo de configuraciones. Se puede sobreescribir con la variable CONFIG_GIT_URI.
           # TODO: reemplazar CAMBIAR-USUARIO por la cuenta/organización real del equipo.
-          uri: ${CONFIG_GIT_URI:https://github.com/TheMiggaCool/logitrack-config.git}
+          uri: ${CONFIG_GIT_URI:https://github.com/logitrack-styx/styx-config}
           default-label: main
           # Clona al arrancar: si la URI está mal, el servidor falla enseguida en vez de en el primer pedido.
           clone-on-start: true
